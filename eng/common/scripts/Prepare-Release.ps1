@@ -2,14 +2,14 @@
 
 <#
 .SYNOPSIS
-This script will do the necessary book keeping work needed to release a package.
+This script will do the necessary bookkeeping work needed to release a package.
 
 .DESCRIPTION
 This script will do a number of things when ran:
 
 - It will read the current version from the project and will have you confirm if that is the version you want to ship
 - It will take the package metadata and version and update the DevOps release tracking items with that information.
-  - If there is existing release work item it will update it and if not it will create one.
+ - If there is existing release work item it will update it and if not, it will create one.
 - It will validate that the changelog has a entry for the package version that you want to release as well as a timestamp.
 
 .PARAMETER PackageName
@@ -35,7 +35,7 @@ You should make any additional changes to the change log to capture the changes 
 PS> ./eng/common/scripts/Prepare-Release.ps1 <PackageName> -ReleaseTrackingOnly
 
 If you aren't ready to do the final versioning changes yet but you want to update release tracking information for shiproom pass in the -ReleaseTrackingOnly.
-option. This should not modify or validate anything in the repo but will update the DevOps release tracking items. Once you are ready for the verioning changes
+option. This should not modify or validate anything in the repo but will update the DevOps release tracking items. Once you are ready for the versioning changes
 as well then come back and run the full script again without the -ReleaseTrackingOnly option and give it the same version information you did the first time.
 #>
 [CmdletBinding()]
